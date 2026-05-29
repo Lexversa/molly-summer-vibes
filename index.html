@@ -492,11 +492,48 @@
     * { cursor: auto !important; }
     .radio-option label, select, .submit-btn { cursor: pointer !important; }
   }
+
+  /* MOLLYSHIP cross-link — same headline creative as mollyship.html, shrunk into a button */
+  .ms-link {
+    position: fixed;
+    top: 16px;
+    right: 18px;
+    z-index: 9500;
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 15px;
+    background: rgba(10, 0, 20, 0.88);
+    border: 3px solid var(--neon);
+    box-shadow: 0 0 22px rgba(255, 16, 240, .55), 4px 4px 0 #000;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(.9rem, 1.4vw, 1.15rem);
+    line-height: 1;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform .15s cubic-bezier(.2,1.5,.4,1), box-shadow .15s;
+  }
+  .ms-link .molly { color: var(--neon); text-shadow: 2px 2px 0 #000, 0 0 14px var(--neon); }
+  .ms-link .ship  { color: transparent; -webkit-text-stroke: 1.5px var(--cyan); text-shadow: 0 0 14px var(--cyan); }
+  .ms-link:hover {
+    transform: translate(-2px, -3px) rotate(-1.5deg);
+    box-shadow: 0 0 34px rgba(255, 16, 240, .85), 7px 7px 0 #000;
+  }
+  @media (max-width: 640px) {
+    .ms-link { top: 10px; right: 10px; padding: 7px 11px; font-size: .78rem; }
+  }
 </style>
 </head>
 <body>
 
 <div class="cursor" id="cursor"></div>
+
+<a class="ms-link" href="/mollyship" aria-label="Play MOLLYSHIP">
+  <span class="molly">MOLLY</span><span class="ship">SHIP</span>
+</a>
+
 <div class="bg-grid"></div>
 <div class="blob blob-1"></div>
 <div class="blob blob-2"></div>
