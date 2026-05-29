@@ -1,0 +1,4 @@
+# Standard library only for launch — no third-party deps needed.
+# Post-launch (Google Sheets), add:
+#   google-api-python-client
+#   google-auth
